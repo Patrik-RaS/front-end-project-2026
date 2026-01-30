@@ -1,0 +1,48 @@
+
+/* paragraph font style and copyright botton font style */
+p {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Header */
+h1 {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: italic;
+}
+ul {
+    list-style: none;
+    padding-left: 0px;
+}
+
+a {
+    color: darkgrey;
+}
+
+/*MAIN*/
+
+.main-image {
+    width: 20%;
+}
+
+/* Logo styling */
+
+#logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    border: 2px solid black;
+    display: inline-table;
+    padding: 5px;
+}
+
+/* footer */
+
+footer{
+    border-top: 1px solid black;
+    margin-top: 3rem;
+
+}
