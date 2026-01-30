@@ -20,7 +20,7 @@ ul {
 }
 
 a {
-    color: darkgrey;
+    color: black;
 }
 
 /*MAIN*/
@@ -31,7 +31,7 @@ a {
 
 /* Logo styling */
 
-#logo {
+.logo {
     font-size: 1.5rem;
     font-weight: 600;
     border: 2px solid black;
@@ -45,4 +45,13 @@ footer{
     border-top: 1px solid black;
     margin-top: 3rem;
 
+}
+/* THE LOGO ON THE SECOND PAGE DOES NOT TAKE THE SAME FORMAT, I TRIED CHANGING LOGO ID INTO CLASS BUT IT STILL DID NOT CHANGE ANYTHING...WHY??? HOW DO I MAKE IT WORK. SAME WITH THE FOOTER - THE COPYRIGHT TEXT DOES NOT TAKE THE SAME FORM AS THE MAIN PAGE. */
+/* targeting only the p inside an a of the second page*/ 
+a p.logo {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+     font-weight: normal;
+    font-style: normal;
+      
 }
