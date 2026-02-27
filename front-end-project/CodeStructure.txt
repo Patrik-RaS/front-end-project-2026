@@ -1,0 +1,17 @@
+/shop
+│
+├── index.html
+├── product.html
+├── cart.html
+│
+├── /css
+│   └── styles.css
+│
+├── /js
+│   ├── data.js
+│   ├── cart.js
+│   ├── main.js
+│   └── product.js
+│
+└── /assets
+    └── (your images here)
