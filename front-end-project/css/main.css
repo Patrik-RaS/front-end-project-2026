@@ -6,8 +6,15 @@ p {
   font-weight: normal;
   font-style: normal;
 }
+/* Header for the main page */
+/* Header for the collection page*/
+header {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
 
-/* Header */
+}
+
 h1 {
   font-family: "Playfair Display", serif;
   font-optical-sizing: auto;
@@ -15,19 +22,41 @@ h1 {
   font-style: italic;
 }
 ul {
+    display: flex;
     list-style: none;
-    padding-left: 0px;
+    padding-left: 10px;
+    text-decoration-thickness: bold;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    margin-top: 1rem;
+    
 }
 
+li {
+    margin: 5rem;
+    
+}
 a {
     color: black;
 }
 
 /*MAIN*/
-
-.main-image {
-    width: 20%;
+/*setting the main images into a position on the main page*/ 
+.mainImages {
+    display:flex ;
+    /* flex-wrap: wrap; */
+    /* justify-content: center; */
 }
+ .main-image {
+    display: flex;
+    flex-direction: row;
+    width:  40vw;
+    aspect-ratio: 1/1;
+    margin: 3rem;
+} 
+
+/*styling the text appropriately to the images*/
+
 
 /* Logo styling */
 
@@ -37,6 +66,7 @@ a {
     border: 2px solid black;
     display: inline-table;
     padding: 5px;
+    
 }
 
 /* footer */
@@ -55,3 +85,74 @@ a p.logo {
     font-style: normal;
       
 }
+
+
+/* Bags html page - styling and placing the images */
+.bag-image{
+    width: 40%;
+    margin-left: 0;
+
+
+}
+
+/* COLLECTION PAGE - grid styling the images and the whole page */
+/* Hits of the month */
+.cat-collection {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 1px;
+    padding: 1px;
+
+@media screen and (max-width: 768px) {
+
+    ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    li {
+        margin: 1rem;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block; 
+}
+
+/* MAIN PAGE - grid styling the images and whole page */ 
+
+/* .mainImages {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 1px;
+    padding: 1px;
+
+@media screen and (max-width: 768px) {
+
+    ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    li {
+        margin: 1rem;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block; 
+} */
