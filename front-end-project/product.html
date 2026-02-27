@@ -5,12 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     
-    /* linking css for product page */ 
+     <!-- linking css for product page   -->
     </html> <link rel="stylesheet" href="css/collections.css">
 </head>
 <body>
    <p class="logo"> BaWa Bags & Wallets </p>    
-   
-</body>
 
+    <main class="product-page">
+
+        <!-- Image Gallery -->
+        <section class="product-gallery">
+            <img id="mainImage" src="img/walletBlack1.jpg" alt="Leather wallet">
+            <div class="thumbs">
+                <img src="img/walletBlack1.1.jpg" onclick="switchImage('walletBlack1.1.jpg')" alt="wallet 1">
+                <img src="img/walletBlack1.2.jpg" onclick="switchImage('walletBlack1.2.jpg')" alt="wallet 2">
+                <!-- <img src="img/walletBlack1.jpg" onclick="switchImage('walletBlack1.jpg')" alt="wallet 3"> -->
+            </div>
+        </section>
+
+        <!-- Product Info -->
+        <section class="product-info">
+            <h2>Full-Grain Leather Wallet</h2>
+            <p class="price">$150.00</p>
+
+            <p class="description">
+                A premium full-grain leather wallet with multiple card slots, perfect for everyday carry.
+            </p>
+
+            <!-- Options -->
+            <div class="options">
+                <label for="color">Color</label>
+                <select id="color">
+                    <option>Black</option>
+                    <option>Brown</option>
+                    <option>Tan</option>
+                </select>
+
+                <label for="size">Size</label>
+                <select id="size">
+                    <option>Standard</option>
+                   <!-- <option>Large</option>   -->
+                </select>
+            </div>
+
+            <!-- Add to Cart -->
+            <button id="addToCartBtn">Add to Cart</button>
+            <p id="message"></p>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
 
