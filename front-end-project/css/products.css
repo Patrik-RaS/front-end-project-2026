@@ -8,7 +8,8 @@
 /* Page Layout */
 body {
     font-family: Arial, sans-serif;
-    padding: 20px;
+    padding: 30px;
+    margin-top: 0.5em;
 }
 
 .site-header {
@@ -20,6 +21,7 @@ body {
     display: flex;
     gap: 40px;
     flex-wrap: wrap;
+    padding-top: 3em;
 }
 
 .product-gallery {
