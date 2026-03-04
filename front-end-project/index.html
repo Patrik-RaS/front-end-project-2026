@@ -4,52 +4,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BaWa Bags & Wallets </title>
+    <title>BaWa Bags & Wallets / Main Page </title>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/imgmainpage.css"
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <header>
+    <header class="headerContent text-main-page">
         <p class="logo"> BaWa Bags & Wallets </p>
         <nav>
             <ul>
-                <a href="#">
-                    <li>Home</li>
-                </a>
-                  <a href="Collections.html"> 
+                <a href="Collections.html"> 
                     <li>Collections</li>
                 </a>
-                <a href="#">
+                <a href="aboutus.html"> <!-- may not need this one-->
                     <li>About us</li>
                 </a>
-                <a href="#"> 
+                <a href="profile.html"> <!-- may not need this one-->
                     <li>Profile</li>
                 </a>
         </nav>
     </header>
+
     <main>
-        <section class="mainImages"> 
+        <section class="product-card main-images"> 
             <a href="Bags.html">
                 <figure> 
-                    <img class="main-image" src="img/bag-2 copy.jpg" alt="Picture of a bag">
-                    <figcaption class="firstText"> Bags </figcaption>
+                    <img class="main-image" src="img/bag-2 copy.jpg" alt="A clickable picture of a bag, redirecting to page with bags.">
+                    <figcaption class="product-info"> 
+                        <h3> Bags </h3>
+                    </figcaption>
                 </figure>
             </a>
-              <a href="Wallets.html">
+            <a href="Wallets.html">
                 <figure> 
-                    <img class="main-image" src="img/walletBlack2.jpg" alt="Picture of a wallet">
-                    <figcaption class="secondText"> Wallets </figcaption>
+                    <img class="main-image" src="img/walletBlack2.jpg" alt="A clickable picture of a wallet, redirecting to page with wallets">
+                    <figcaption class="product-info"> 
+                        <h4>Wallets</h4> 
+                    </figcaption>
                 </figure>
             </a>
         </section>
-       
+
         <h1>
             Welcome to BaWa!!
         </h1>
-        <p>
+        <p class="text-main-page">
             Each bag and wallet is handcrafted with intention, designed for men who appreciate quiet confidence and lasting style.
 From the first touch, you feel the difference of premium materials chosen from the best suppliers in the market.
 The leather is rich, resilient, and alive, aging beautifully as it becomes part of your daily story.
@@ -61,7 +64,7 @@ Despite their high quality and craftsmanship, the pricing remains fair, because 
         </p>
     </main>
 
-    <footer>
+    <footer class="text-main-page">
         <p>© BaWa Bags & Wallets 2026</p>
     </footer>
 </body>
