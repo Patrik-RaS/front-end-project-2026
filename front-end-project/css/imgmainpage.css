@@ -39,9 +39,9 @@
 }
 
 /* Text styling MAIN PAGE - text appearing in the images*/
-.product-info h3 {
-    display: flex;
-    justify-content: flex-start;
+.product-info h3 { 
+    display: grid; /*idk if I should leave it like this or make it flex again...i tried and it does not seem to do anything different..*/
+    justify-content: start;
     margin: 0;
     font-size: 1.2rem;
     left: 0;

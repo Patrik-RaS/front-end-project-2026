@@ -15,3 +15,35 @@
 │
 └── /assets
     └── (your images here)
+
+
+        <!-- <p class="logo"> BaWa Bags & Wallets </p>
+        <nav>
+            <ul>
+                <a href="Collections.html"> 
+                    <li>Collections</li>
+                </a>
+                <a href="aboutus.html"> may not need this one, extra stuff
+                    <li>About us</li>
+                </a>
+                <a href="#"> not clickable, prepared for future work
+                    <li>Profile</li>
+                </a>
+            </ul>
+        </nav> -->
+
+
+FOR MAKING THE NAV AND MENU ADJUSTABLE FOR PHONE VERSION ... 
+         <!-- <nav class="mobile-navigation"> 
+                <div class="nav-header">
+                    <img class="logo-img" src="img/LogoBW.svg" alt="BaWa Logo">
+                    <img class="menu-icon" src="img/menuicon.svg" alt="Menu icon">
+                </div>
+
+                <ul class="ulul"> 
+                        <li> <a href="collections.html">Collections</a></li>
+                        <li><a href="aboutus.html">About us</a></li>
+                        <li><a href="#">Profile</a></li>
+
+                </ul>
+        </nav>  -->

@@ -28,6 +28,10 @@ h1 {
 }
 
 /* all the Unordered list = menu-bar/links */
+ul{
+    list-style: none;
+    padding-left: 10px;
+}
 ul {
     display: flex;
     list-style: none;
@@ -36,15 +40,24 @@ ul {
     border-top: 1px solid black;
     border-bottom: 1px solid black;
     margin-top: 1rem;
-    justify-content: space-evenly; /*rozmiestenie menu-bar */
+    justify-content: space-evenly; /*rozmiestenie menu-bar*/
 }
 
 /* width of the menu-bar */
 li {
     margin: 1rem;
 }
-ul.aboutuslist {
-    margin: 0;
+
+/* making a separate class and applying code only for ul-li on the AboutUs page, so I dont have to create again a separate file of css for it. */
+.aboutuslist{
+    display: flex;
+    list-style: none;
+    padding: 0%;
+    text-decoration-thickness: bold;
+    border: none;
+    margin: 0%;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 /* styling the links/menu bar  */
@@ -91,6 +104,7 @@ footer {
     border-top: 1px solid black;
     margin-top: 3rem;
 }
+
 
 /* COLLECTION PAGE - grid styling the images and the whole page */
 /* Hits of the month */
