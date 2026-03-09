@@ -1,0 +1,250 @@
+
+VIDEO Eveline / changing the background color
+HTML doc inside the body
+
+ <!-- <button id="red-button">   
+        Red button
+    </button>
+      <button id="blue-button">   
+        Blue button
+    </button>
+      <button id="green-button">   
+        Green button
+    </button>
+     -->
+
+JS code
+
+// Eveline video CHANGING THE BACKGROUND COLOR and buttons...
+// const redButton = document.getElementById("red-button");
+// const blueButton = document.getElementById("blue-button");
+// const greenButton = document.getElementById("green-button");
+// const bodyElement = document.querySelector("body");
+
+// redButton.addEventListener("click", function (event) {
+//     bodyElement.style.backgroundColor = "#ff0000"
+// });
+
+// blueButton.addEventListener("click", function (event){
+//     bodyElement.style.backgroundColor = "#0000ff"
+// });
+
+// greenButton.addEventListener("click", function (event){
+//     bodyElement.style.backgroundColor = "#00ff00"
+// });
+
+
+
+
+
+
+
+
+
+
+
+VIDEO eveline / user input
+HTML (inside body)
+  <h1 id="heading">What is your name and age?</h1>
+    <input id="input-name" type="text">
+    <input id="input-age" type="number">
+    <button id="enter-button">Enter</button>   
+
+JS code
+
+const headingElement = document.getElementById("heading");
+const nameElement = document.getElementById("input-name");
+const ageElement = document.getElementById("input-age");
+const buttonElement = document.getElementById("enter-button");
+
+//Simple command using a function...WORKING WITH USER INPUT 
+// buttonElement.addEventListener("click", function(event){
+//     let enteredName = nameElement.value;
+//     let enteredAge = ageElement.value;
+//     headingElement.innerText = "Hej Hej " + enteredName + " " + enteredAge;
+
+// });
+
+//Making it more complicated...with IF statement, SO it shows the Hwj Hej text when there is no value typed, but button is clicked...
+buttonElement.addEventListener("click", function(event){
+    let enteredName = nameElement.value;
+    let enteredAge = ageElement.value;
+    if(enteredName !== "" || enteredAge !== ""){
+        headingElement.innerText = "Hej Hej " + enteredName + " " + enteredAge;
+    }
+    else{
+        headingElement.innerText = "What is your name and age?"
+    }
+    
+});
+
+
+
+
+VIDEO Eveline / Creating HTML elements in JS 
+HTML code
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listeners</title>
+    <script src="js/main.js"defer></script>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+
+<body>
+    <ul id="list">
+        
+    </ul>
+</body>
+</html>
+
+JS code
+
+
+// Creating HTML Elements in JS
+//calling out the ul by its ID 
+const ulElement = document.getElementById("list");
+
+//function for creating an element
+const liElement = document.createElement("li");
+//specifying the element characteristics
+liElement.innerText = "Item";
+liElement.style.color = "Magenta";
+liElement.classList.add("bold");
+
+//actually applying the created element() to the parent element, in this case UL...
+ulElement.appendChild(liElement);
+
+// more visual specification in CSS...
+
+
+
+VIDEO Eveline / STORING DATA IN LOCAL STORAGE
+HTML
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listeners</title>
+    <script src="js/main.js"defer></script>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+
+<body>
+    
+</body>
+</html>
+
+JS code
+/*STRINGS*/
+// value is actual data 
+// key is name
+
+
+//STORING DATA 
+let animal = "dog";
+localStorage.animal = animal;
+//RETRIEVING DATA
+let newAnimal = localStorage.animal;
+console.log(newAnimal);
+
+
+/*NUMBERS*/
+let number = 3; 
+
+localStorage.number = number;
+
+//THIS (except retrieving the data) is also storing the number noot as a number in the string...
+// let newNumber = localStorage.number;
+// console.log(newNumber + 1); //this would not give 4 but 31...
+
+//Thats why we use parseInt to make it a number,//it takes the ()string and converts it back to a number..that we then store in this value --> let newNumber ...
+let newNumber = parseInt(localStorage.number);
+console.log(newNumber + 1); //this gives us 4...
+//when retrieving nnumbers we use parseInt to convert them back to numbers,
+
+//If it is a number/numbers with decimals f.e. 4.13, then we use parseFloat INSTEAD!!!!!!!
+
+
+
+/*ARRAYS*/
+let animals = ["dog", "cat", "horse"];
+//localStorage.animals = animals; //this needs to be changed....
+
+//when retrieving info, this returns us the whole value in a string, not an array...
+//let newAnimals = localStorage.animals;
+//console.log(newAnimal[0]); //so when f.e. like here trying to call only first word it instead calls out first letter of the whole string which is in our case d ... 
+
+//when retrieving value we want it returned as an array instead of string so we use: 
+
+
+//Correct version
+localStorage.animals = JSON.stringify(animals); //this takes the array, converts it to a string and then stores it into a string to let newAnimals.... 
+let newAnimals = JSON.parse(localStorage.animals); //when retrieving value this helps us to get back an array..
+console.log(newAnimals[0]); //the outcome would be the whole first animal, not only a letter....
+
+
+
+
+/*OBJECTS*/
+//This gives us only [object, object] in the local storage value...
+//let dog = {name: "Julius", breed: "Bernese" };
+//localStorage.dog = dog; 
+
+//storing and retrieving the object correctly:
+let dog = {name: "Julius", breed: "Bernese" };
+localStorage.dog = JSON.stringify(dog); 
+let newDog = JSON.parse(localStorage.dog);
+console.log(newDog.breed); 
+
+
+
+
+
+
+
+
+VIDEO Eveline / 
+HTML doc
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listeners</title>
+    <script src="js/main.js"defer></script>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+
+<body>
+    <h1 id="header">Change this text</h1>
+    <input id="input" type="text" placeholder="Write here">
+    <button id="button">Change</button>
+</body>
+</html>
+
+JS code
+//LOCAL STORAGE AND EVENTLISTENERS AKA MAKING HTML STRUCTURE FOR TEXT AND BUTTON WORK WITH JS 
+const headerElement = document.querySelector("#header");
+const inputElement = document.getElementById("input");
+const buttonElement = document.getElementById("button");
+
+if(localStorage.text){
+    headerElement.innerText = localStorage.text;
+}else{
+    headerElement.text = "Change this text";
+}
+
+
+buttonElement.addEventListener("click", function(event){
+    let text = inputElement.value;
+    headerElement.innerText = text;
+    localStorage.writtenText = text;
+});
