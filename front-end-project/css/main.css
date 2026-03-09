@@ -1,34 +1,314 @@
-
+/*SETTING THE BASIC STYLING FOR BODY = HEADER, MAIN, FOOTER*/
 /* setting the background color for the pages */
 body {
+    display: grid;
     background-color: #f5f5f5;
+    grid-template-areas: 
+    "header header header"
+    "main main main"
+    "footer footer footer";
+    
 }
 
+header {
+    grid-area: header;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* padding: 25px 9%; */
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    
+    display: flex;
+    flex-direction: column;
+
+
+    z-index: 99; /*header appears above other elements*/ 
+}
+
+main {
+    grid-area: main;
+    margin-top: 80px;
+}
+
+footer {
+    grid-area: footer;
+    border-top: 1px solid black;
+    margin-top: 3rem;
+}
+
+
+
+
+
+/*HEADER STUFF*/
+/* .text-main-page{
+ font-style: "Playfair Display", serif;
+ font-weight: normal; 
+
+} */
+
+
+.header-top{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+
+    padding: 15px 40px;
+}
+
+.logo-placement{
+    display: flex;
+    justify-content: space-evenly;
+    font-size:xx-large;
+    
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    gap: 7rem;
+    font-size: large;
+    margin: 1px;
+
+}
+
+
+nav{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-right: 35px;
+    border: 1px solid black;
+    font-weight: bold;
+
+}
+
+
+.shopping-cart {
+    width: 6%;
+    display: flex;
+    margin-left: 90%;
+    /* padding-bottom: 1vw; */
+}
+
+a{
+ text-decoration: none;
+ color: black;
+}
+
+
+
+
+
+
+/*MAIN STUFF*/
+.main-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding-top: 100px;
+    margin-top: 5%;
+}
+
+.main-img {
+    width: 100%;
+    height:auto;
+    transition: 0.5s;
+    object-fit: cover;
+}
+
+.img-box {
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 550px; /*making all the boxes the same size*/
+}
+
+.img-box:hover img {
+    transform: scale(1.2);
+}
+
+
+/*img Stylings on main page*/
+.main-image {
+    width: 35%;
+
+}
+
+figure img {
+ display: flex;
+ flex-direction: row;
+ align-content: center;
+ border-radius: 10px;
+ overflow: hidden;
+}
+
+
+
+
+
+
+
+
+/*COLLECTIONS CSS CODE*/ 
+.cat-collection{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    /* padding-top: 100px; */
+    margin-top: 5%;
+    width: 100%;
+    height:auto;
+    transition: 0.5s;
+    object-fit: cover;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+.img-hit {
+    padding: 0;
+    margin: none;
+    border: none;
+}
+
+
+.hits-collection {
+    margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+
+
+
+/*BAGS page CSS CODE*/
+.product-grid {
+    margin-top: 120px;
+}
+
+.product-card {
+    border-radius: 10px;
+}
+
+.logo-shoppingcart {
+    display: flex;
+
+}
+
+.shopping-cart-products{
+    margin-top: 6%;
+     width: 6%;
+    display: flex;
+    margin-left: 90%;
+
+}
+.logo-placement-products{
+    display: flex;
+    margin-left: 38%;
+    justify-content: space-evenly;
+    font-size:xx-large;
+}
+
+
+
+/*ABOUT US PAGE*/
+.about-us-list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    font-size: large;
+    color: #740172;
+    font-weight: 900;
+}
+
+.intro-about-us {
+
+}
+
+
+
+
+
+
+/*PRODUCT 1 PAGE CSS*/
+.logo-placement-products-page{
+    display: flex;
+    margin-left: 38%;
+    justify-content: space-evenly;
+    font-size:xx-large;
+}
+
+
+
+
+
+
+
+
+
+/*.headerContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+}*/
+
+
 /* paragraph font style and copyright botton font style */
-.text-main-page { 
+/*.text-main-page { 
   font-family: "Playfair Display", serif;
   /* font-optical-sizing: auto;
   font-weight: normal; */  /*already set the size and weight in .logo */ 
-  font-style: normal;
+  /*font-style: normal;
+  
+}*/
+/*.logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    border: 2px solid black;
+    display: inline-table; *//*makes the line go only around logo and makes the underline dissapear*/
+   /*   padding: 5px;
+    color: black;
+    display: flex;
+    justify-content: /*center; logo natiahnute na celu obrazovku*/
+   /*   position: sticky;
 }
+
+/* .logo-placement {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 25px 9%;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(red, green, blue, alpha);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99; /*header appears above other elements 
+} */
 
 /* Header for the main page */
 /* Header for the collection page*/
-.headerContent {
-    display: flex;
-    flex-direction: column;
-}
+
 
 /* all the headers in ITALIC on all pages */
-h1 {
+/*h1 {
   font-family: "Playfair Display", serif;
   font-optical-sizing: auto;
   font-weight: normal;
   font-style: italic;
 }
-
+*/
 /* all the Unordered list = menu-bar/links */
-ul{
+/*ul{
     list-style: none;
     padding-left: 10px;
 }
@@ -40,16 +320,16 @@ ul {
     border-top: 1px solid black;
     border-bottom: 1px solid black;
     margin-top: 1rem;
-    justify-content: space-evenly; /*rozmiestenie menu-bar*/
-}
+    justify-content: space-evenly;   */      /*rozmiestenie menu-bar*/
+/*}*/
 
 /* width of the menu-bar */
-li {
+/*li {
     margin: 1rem;
-}
+}*/
 
 /* making a separate class and applying code only for ul-li on the AboutUs page, so I dont have to create again a separate file of css for it. */
-.aboutuslist{
+/*.aboutuslist{
     display: flex;
     list-style: none;
     padding: 0%;
@@ -58,21 +338,21 @@ li {
     margin: 0%;
     flex-direction: column;
     align-items: flex-start;
-}
+}*/
 
 /* styling the links/menu bar  */
-a {
+/*a {
     color: #000000;
     text-decoration: none;
-}
+}*/
 
 /*MAIN*/
 /*setting the main images into a position on the main page*/ 
-.main-image {
+/*.main-image {
     width: 100%;
     aspect-ratio: 1 / 1;
     object-fit: cover;
-}
+}*/
 
 /* Not functional anymore rn, but might need it... */
 /*.main-images {
@@ -87,28 +367,17 @@ a {
 }  */
 
 /* Logo styling */
-.logo {
-    font-size: 1.5rem;
-    font-weight: 600;
-    border: 2px solid black;
-    display: inline-table; /*makes the line go only around logo and makes the underline dissapear*/
-    padding: 5px;
-    color: black;
-    display: flex;
-    justify-content: center; /* logo natiahnute na celu obrazovku*/
-    position: sticky;
-}
 
-/* footer styling */
-footer {
-    border-top: 1px solid black;
-    margin-top: 3rem;
-}
+
+/*.shopping-cart {
+    width: 3.5%;
+
+}*/ 
 
 
 /* COLLECTION PAGE - grid styling the images and the whole page */
 /* Hits of the month */
-.cat-collection {
+/*.cat-collection {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
     gap: 1px;
@@ -139,7 +408,7 @@ img {
 
 /* MAIN PAGE - grid styling the images and whole page */ 
  /* MAIN IMAGE GRID */
-.main-images {
+/*.main-images {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
@@ -162,3 +431,4 @@ img {
 
 }
 
+*/

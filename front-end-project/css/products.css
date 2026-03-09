@@ -73,3 +73,14 @@ select {
     border: 1px solid #aaa;
     border-radius: 4px;
 }
+
+.cart-item-count {
+    padding: 4px;
+    background: #e22bdf;
+    border-radius: 6px;
+    font-size: 20px;
+    color: #000000;
+    cursor: pointer;
+    margin-bottom: 50px;
+    z-index: 99;
+}

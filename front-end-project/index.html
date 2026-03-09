@@ -6,17 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BaWa Bags & Wallets / Main Page </title>
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/imgmainpage.css"
-    <script src="js/mobile-navigation.js" defer> </script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+   
+    <!-- <link rel="stylesheet" href="css/imgmainpage.css"> -->
+    <!-- <script src="js/mobile-navigation.js" defer> </script> -->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet"> -->
+    
 </head>
 
 <body>
     <header class="headerContent text-main-page">
-        <p class="logo"> BaWa Bags & Wallets </p>
-    <nav>
+        <div class="header-top">
+             <a class="logo-placement" href="index.html"> 
+                <p class="logo"> BaWa Bags & Wallets </p>
+            </a>
+            <!-- <p class="logo"> BaWa Bags & Wallets </p> -->
+        </div>
+        
+     <nav>
         <ul>
             <a href="Collections.html"> 
                 <li>Collections</li>
@@ -26,29 +34,38 @@
             </a>
             <a href="#"> <!--not clickable, prepared for future work-->
                 <li>Profile</li>
-            </a>
+            </a> 
+            <a href="shoppingcart.html"> <img class="shopping-cart" src="img/shoppingBag.png" alt="Shopping bag icon"/></a>
         </ul>
-    </nav>
+     </nav> 
+        
+
     </header>
 
     <main>
-        <section class="product-card main-images"> 
+        <section class="main-images"> 
             <a href="Bags.html">
                 <figure> 
-                    <img class="main-image" src="img/bag-2 copy.jpg" alt="A clickable picture of a bag, redirecting to page with bags.">
-                    <figcaption class="product-info"> 
+                    <div class="img-box"> 
+                        <img class="main-img" src="img/bag-2 copy.jpg" alt="A clickable picture of a bag, redirecting to page with bags.">
+                    </div> 
+                    <!-- <figcaption class="product-info"> 
                         <h3> Bags </h3>
-                    </figcaption>
+                    </figcaption> -->
                 </figure>
             </a>
+
             <a href="Wallets.html">
                 <figure> 
-                    <img class="main-image" src="img/walletBlack2.jpg" alt="A clickable picture of a wallet, redirecting to page with wallets">
-                    <figcaption class="product-info"> 
+                    <div class="img-box">   
+                        <img class="main-img" src="img/walletBlack2.jpg" alt="A clickable picture of a wallet, redirecting to page with wallets">
+                    </div>
+                    <!-- <figcaption class="product-info"> 
                         <h4>Wallets</h4> 
-                    </figcaption>
+                    </figcaption> -->
                 </figure>
             </a>
+
         </section>
 
         <h1>
