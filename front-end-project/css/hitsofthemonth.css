@@ -1,63 +1,208 @@
-/* ===== PRODUCT GRID ===== */
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-    padding: 1rem;
+/*header - logo*/
+.header-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 15px 40px;
 }
+
+.logo-placement {
+  display: flex;
+  justify-content: space-evenly;
+  font-size: xx-large;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  padding-right: 35px;
+  padding-left: 35px;
+  border: 1px solid black;
+  font-weight: bold;
+}
+.collections-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 50px;
+}
+.collections-links li {
+  text-decoration: none;
+  list-style-type: none;
+  text-wrap: nowrap;
+}
+nav a {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.shopping-cart {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  /* margin-left: 90%; */
+  /* padding-bottom: 1vw; */
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/*does not work-GRID*/
+/* ===== PRODUCT GRID ===== */
+/* .product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 1rem;
+} */
 
 /* ===== PRODUCT CARD ===== */
 .product-card {
-    position: relative;
-    overflow: hidden;
-    text-decoration: none;
-    color: #ffffff;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  color: #ffffff;
 }
 
 /* Image styling */
 .product-card img {
-    width: 100%;
-    height: 800px;
-    object-fit:cover; /*makes the image cover the whole square I put them in...*/
-    transition: transform 0.5s ease; /* setting how fast it will get the close-up look when mouse over image..*/
+  width: 100%;
+  height: 350px;
+  object-fit: cover; /*makes the image cover the whole square I put them in...*/
+  transition: transform 0.5s ease; /* setting how fast it will get the close-up look when mouse over image..*/
 }
 
 /* Hover zoom */
 .product-card:hover img {
-    transform: scale(1.08);
+  transform: scale(1.08);
 }
 
 /* ===== HOVER INFO OVERLAY ===== */
 .product-info {
-    position: absolute;
-    bottom: 0;
-    left: 0; /*when f.e. at 20% it makes the start of the text rect. move 20% to the right */
-    width: 100%; /*width of the text = to width of the image..*/
-    padding: 1.5rem; /*how high from the bottom of the img is the text that was placed inside the img*/
-    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
-    opacity: 0; /* makes the text not visible at first, only when mouse over...*/
-    transform: translateY(20px);
-    transition: all 0.4s ease;
+  position: absolute;
+  bottom: 0;
+  left: 0; /*when f.e. at 20% it makes the start of the text rect. move 20% to the right */
+  width: 100%; /*width of the text = to width of the image..*/
+  padding: 1.5rem; /*how high from the bottom of the img is the text that was placed inside the img*/
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  opacity: 0; /* makes the text not visible at first, only when mouse over...*/
+  transform: translateY(20px);
+  transition: all 0.4s ease;
 }
 
 /* Show info on hover */
 .product-card:hover .product-info {
-    opacity: 1;
-    transform: translateY(0);
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* Text styling */
 .product-info h3 {
-    margin: 0;
-    font-size: 1.2rem;
+  margin: 0;
+  font-size: 1.2rem;
 }
 
 .product-info p {
-    margin: 0.3rem 0 0;
-    font-size: 0.9rem;
+  margin: 0.3rem 0 0;
+  font-size: 0.9rem;
 }
 
 .color-change {
-    text-decoration: double;
-    color: red;
+  text-decoration: double;
+  color: red;
+}
+
+/*COLLECTIONS CSS CODE*/
+/* .cat-collection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 5%;
+  width: 100%;
+  height: auto;
+  transition: 0.5s;
+  object-fit: cover;
+  text-decoration: none;
+  border-radius: 10px;
+} */
+.cat-collection {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 40px;
+}
+
+.img-hit {
+  padding: 0;
+  margin: none;
+  border: none;
+}
+
+.hits-collection {
+  margin-top: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (max-width: 1024px) {
+  .cat-collection {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .product-card img {
+    height: 400px;
+  }
+
+  nav {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+@media (max-width: 768px) {
+  header {
+    position: static;
+  }
+
+  main {
+    margin-top: 20px;
+  }
+
+  .cat-collection {
+    grid-template-columns: 1fr;
+  }
+
+  .product-card img {
+    height: 650px;
+    width: auto;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .collections-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    font-size: large;
+  }
+
+  .logo-placement {
+    font-size: 22px;
+  }
+
+  .logo {
+    font-size: xx-large;
+  }
+
+  .shopping-cart {
+    padding-top: 25px;
+  }
 }

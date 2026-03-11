@@ -1,42 +1,44 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Product Page</title>
-    
-     <!-- linking css for product page   -->
-    
-    <link rel="stylesheet" href="css/products.css">
-    <link rel="stylesheet" href="css/main.css">
+
+    <!-- linking css for product page   -->
+
+    <link rel="stylesheet" href="css/products.css" />
+    <link rel="stylesheet" href="css/main.css" />
     <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet"> -->
-
-</head>
-<body>
+  </head>
+  <body>
     <header class="text-main-page">
-     <div class="logo-shoppingcart">
-        <a class="logo-placement-products-page" href="index.html">
-        <p class="logo">BaWa Bags & Wallets</p>
+      <div class="logo-shoppingcart">
+        <a class="logo-placement-products" href="index.html">
+          <p class="logo">BaWa Bags & Wallets</p>
         </a>
-        <a href="shoppingcart.html"> <img class="shopping-cart-products" src="img/shoppingBag.png" alt="Shopping bag icon"/></a>
+        <a class="cart-section" href="shoppingcart.html">
+          <img
+            class="shopping-cart"
+            src="img/shoppingBag.png"
+            alt="Shopping bag icon"
+        /></a>
         <span class="cart-item-count"> </span>
-     </div>
-    
+      </div>
     </header>
 
     <main class="product-page">
-
-        <!-- Image Gallery -->
-        <section class="product-gallery">
-            <img id="mainImage" src="img/walletBlack1.jpg" alt="Leather wallet">
-            <!-- <div class="thumbs">
+      <!-- Image Gallery -->
+      <section class="product-gallery">
+        <img id="mainImage" src="img/walletBlack1.jpg" alt="Leather wallet" />
+        <!-- <div class="thumbs">
                 <img src="img/bag-1.brown.jpeg" onclick="switchImage('bag-1 copy.jpg')" alt="wallet 1">
             </div> -->
-        </section>
+      </section>
 
-        <!-- <a href="product1.html" class="product-card">
+      <!-- <a href="product1.html" class="product-card">
             <img src="img/bag-1 copy.jpg" alt="Black leather business bag">
             <div class="product-info">
                 <h3>Executive Black</h3>
@@ -44,44 +46,42 @@
             </div>
         </a> -->
 
-        <!-- Product Info -->
-        <section class="product-info">
-            <h2 class="name-of-product">Full-Grain Leather Wallet</h2>
-            <p class="price">€89</p>
+      <!-- Product Info -->
+      <section class="product-info">
+        <h2 class="name-of-product">Full-Grain Leather Wallet</h2>
+        <p class="price">€89</p>
 
-            <p class="description">
-               A premium full-grain leather wallet with multiple card slots, perfect for everyday carry.
-            </p>
+        <p class="description">
+          A premium full-grain leather wallet with multiple card slots, perfect
+          for everyday carry.
+        </p>
 
-            <!-- Options -->
-            <div class="options">
-                <label for="color">Color</label>
-                <select id="color">
-                    <option>Black</option>
-                    <option>Brown</option>
-                </select>
+        <!-- Options -->
+        <div class="options">
+          <label for="color">Color</label>
+          <select id="color">
+            <option>Black</option>
+            <!-- <option>Brown</option> -->
+          </select>
 
-                <label for="size">Size</label>
-                <select id="size">
-                    <option>Standard</option>
-                   <!-- <option>Large</option>   -->
-                </select>
-            </div>
+          <label for="size">Size</label>
+          <select id="size">
+            <option>Standard</option>
+            <!-- <option>Large</option>   -->
+          </select>
+        </div>
 
-            <!-- Add to Cart --> 
-            <button class="btn-buy">Add to Cart</button>
-            <p class="message"></p>
-        </section>
-
+        <!-- Add to Cart -->
+        <button class="btn-buy">Add to Cart</button>
+        <p class="message"></p>
+      </section>
     </main>
 
-    <footer class="text-main-page"> 
-         <p>© BaWa Bags & Wallets 2026</p>
+    <footer class="text-main-page">
+      <p>© BaWa Bags & Wallets 2026</p>
     </footer>
 
-    <script src="js/product.js"> </script>
-    <script src="js/shoppingcart.js"> </script>
-
-</body>
+    <script src="js/product.js"></script>
+    <script src="js/shoppingcart.js"></script>
+  </body>
 </html>
-

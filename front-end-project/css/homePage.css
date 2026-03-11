@@ -1,0 +1,188 @@
+/*HEADER STUFF*/
+
+.header-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 15px 40px;
+}
+
+.logo-placement {
+  display: flex;
+  justify-content: space-evenly;
+  font-size: xx-large;
+}
+
+/* ul {
+  display: flex;
+  list-style: none;
+  gap: 7rem;
+  font-size: large;
+  margin: 1px;
+} */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  padding-right: 35px;
+  padding-left: 35px;
+  border: 1px solid black;
+  font-weight: bold;
+}
+
+.collections-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.collections-links li {
+  text-decoration: none;
+  list-style-type: none;
+  text-wrap: nowrap;
+}
+
+nav a {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.shopping-cart {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  /* margin-left: 90%; */
+  /* padding-bottom: 1vw; */
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/*MAIN STUFF*/
+/*layout for monitors/laptops*/
+.main-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  padding-top: 100px;
+  margin-top: 5vw;
+}
+
+.main-img {
+  width: 100%;
+  height: auto;
+  transition: 0.5s;
+  object-fit: cover;
+}
+
+.img-box {
+  display: flex;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 550px; /*making all the boxes the same size*/
+}
+
+.img-box:hover img {
+  transform: scale(1.2);
+}
+
+/*img Stylings on main page*/
+.main-image {
+  width: 35%;
+}
+
+figure img {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/*layout for ipads/smaller screens*/
+@media (max-width: 1024px) {
+  .main-images {
+    grid-template-columns: 1fr;
+  }
+
+  .img-box {
+    height: 420px;
+  }
+
+  nav {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .collections-links {
+    gap: 30px;
+  }
+}
+
+/*layout for phones and small screens*/
+@media (max-width: 768px) {
+  header {
+    position: static;
+  }
+
+  main {
+    margin-top: 20px;
+  }
+
+  .header-top {
+    padding: 10px;
+  }
+
+  .logo-placement {
+    font-size: 22px;
+  }
+
+  .logo {
+    font-size: xx-large;
+  }
+
+  .shopping-cart {
+    padding-top: 25px;
+  }
+  nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .collections-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    font-size: large;
+  }
+
+  .main-images {
+    grid-template-columns: 1fr;
+    padding-top: 20px;
+  }
+
+  .img-box {
+    height: 300px;
+  }
+}
+
+/*extra big screens - limiting width for the main*/
+@media (min-width: 1400px) {
+  main {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
