@@ -24,11 +24,33 @@
   text-decoration: none;
   color: black;
   font-size: 28px;
-  font-weight: bold;
+  font-weight: none;
+  font-size: xx-large;
 }
-/* header {
-  height: 70px;
-} */
+.text-main-page p {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.cart-item-count {
+  position: absolute;
+  top: 25px;
+  right: 32px;
+  background: #e22bdf;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 3px 6px;
+  border-radius: 50%;
+}
+
+.logo {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
 /*MAIN*/
 /* Basic Reset */
 * {
@@ -38,15 +60,11 @@
 }
 
 /* Page Layout */
+/*styling the text in the s.cart..*/
 body {
   font-family: Arial, sans-serif;
   padding: 30px;
   margin-top: 0.5em;
-}
-
-.site-header {
-  text-align: center;
-  margin-bottom: 30px;
 }
 
 .product-page {
@@ -64,19 +82,6 @@ body {
 .product-gallery img {
   width: 100%;
   border-radius: 8px;
-}
-
-.thumbs {
-  margin-top: 10px;
-  display: flex;
-  gap: 8px;
-}
-
-.thumbs img {
-  width: 60px;
-  cursor: pointer;
-  border: 2px solid #ddd;
-  border-radius: 4px;
 }
 
 .product-info {
@@ -106,14 +111,59 @@ select {
   border-radius: 4px;
 }
 
-.cart-item-count {
-  position: absolute;
-  top: 1px;
-  right: 30px;
-  background: #e22bdf;
-  color: white;
-  font-size: 12px;
+.btn-buy {
+  margin-top: 20px;
+  padding: 14px 20px; /*finger size optimalization*/
+  width: 100%;
+  font-size: 16px; /*readability for mobile phone*/
   font-weight: bold;
-  padding: 3px 6px;
-  border-radius: 50%;
+  border: none;
+  border-radius: 6px;
+  background-color: #000;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-buy:hover {
+  background-color: #333;
+}
+
+/*screen sizing for phones - adjustments*/
+@media (max-width: 768px) {
+  body {
+    padding: 15px;
+  }
+
+  .logo-shoppingcart {
+    padding: 10px 15px;
+  }
+
+  .logo-placement-products {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .cart-section {
+    right: 15px;
+  }
+
+  .product-page {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .product-gallery img {
+    width: 100%;
+    height: auto;
+  }
+
+  .product-info {
+    width: 100%;
+  }
+
+  .btn-buy {
+    font-size: 18px;
+    padding: 16px;
+  }
 }

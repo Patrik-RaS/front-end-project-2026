@@ -1,12 +1,11 @@
-/* ===== PRODUCT GRID ===== */
+/*  PRODUCT GRID */
 .product-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
   padding: 2rem;
 }
-
-/* ===== PRODUCT CARD ===== */
+/* PRODUCT CARD */
 .product-card {
   position: relative;
   overflow: hidden;
@@ -60,6 +59,7 @@
 .logo-shoppingcart {
   display: flex;
   justify-content: space-between;
+  font-size: xx-large;
 }
 .dummy-space {
   width: 30px;
@@ -69,8 +69,6 @@
   width: 30px;
   height: 30px;
   display: flex;
-  /* margin-left: 90%; */
-  /* padding-bottom: 1vw; */
 }
 
 .logo-placement-products {
@@ -82,4 +80,11 @@
   justify-content: flex-end;
   align-items: center;
   padding-right: 35px;
+}
+
+.logo {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }

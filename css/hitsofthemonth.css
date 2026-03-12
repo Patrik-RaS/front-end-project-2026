@@ -12,6 +12,14 @@
   justify-content: space-evenly;
   font-size: xx-large;
 }
+
+.logo {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -50,16 +58,7 @@ a {
   color: black;
 }
 
-/*does not work-GRID*/
-/* ===== PRODUCT GRID ===== */
-/* .product-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  padding: 1rem;
-} */
-
-/* ===== PRODUCT CARD ===== */
+/* PRODUCT CARD */
 .product-card {
   position: relative;
   overflow: hidden;
@@ -115,19 +114,6 @@ a {
   color: red;
 }
 
-/*COLLECTIONS CSS CODE*/
-/* .cat-collection {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
-  margin-top: 5%;
-  width: 100%;
-  height: auto;
-  transition: 0.5s;
-  object-fit: cover;
-  text-decoration: none;
-  border-radius: 10px;
-} */
 .cat-collection {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
